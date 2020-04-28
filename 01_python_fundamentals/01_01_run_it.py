@@ -15,3 +15,14 @@
 
 '''
 print("hello world")
+# the error messages were very helpful and showed me what I had left out
+
+help('print')
+
+print(4+4)
+
+print("(365*24*60*60) seconds")
+
+
+
+
