@@ -21,7 +21,9 @@ help('print')
 
 print(4+4)
 
-print("(365*24*60*60) seconds")
+print(365*24*60*60)
+
+
 
 
 
