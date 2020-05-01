@@ -21,7 +21,9 @@ help('print')
 
 print(4+4)
 
-print(365*24*60*60)
+year_seconds = 365*24*60*60
+print(str(year_seconds)+" seconds")
+
 
 
 
