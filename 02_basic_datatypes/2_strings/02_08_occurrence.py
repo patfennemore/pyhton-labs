@@ -7,3 +7,8 @@ Letter input: o
 Result: 4
 
 '''
+sentence = input("Please enter a sentence: ")
+word = input("Please enter a letter: ")
+
+print("First Occurrence Position : " + str(sentence.find(word)))
+
