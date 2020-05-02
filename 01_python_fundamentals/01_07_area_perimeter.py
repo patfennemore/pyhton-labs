@@ -4,11 +4,11 @@ Write the necessary code to display the area and perimeter of a rectangle that h
 
 '''
 
-w = 2.4
+width = 2.4
 
-h = 6.4
+height = 6.4
 
-#Perimeter
-print(2*(w+h))
-#area
-print(w*h)
+perimeter = 2*(width+height)
+print(perimeter)
+area = width*height
+print(area)
