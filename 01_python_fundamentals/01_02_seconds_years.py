@@ -5,4 +5,5 @@ Then execute it as a script to see the output printed to your console.
 
 '''
 
-print(365*24*60*60)
+year_seconds = 365*24*60*60
+print(str(year_seconds)+" seconds")
