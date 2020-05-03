@@ -9,9 +9,11 @@ CHALLENGE: Can you change the script so that it counts the occurrence of each in
 
 sentence = input("Please enter a sentence: ")
 sentence = sentence.lower()
-count = 0
-for i in sentence.lower():
-    if i in "aeiou":
-        count += 1
-print(str(count)+ " Vowels in sentence")
+vowels = 0
+for i in sentence:
+      if(i == 'a' or i == 'e' or i=='i' or i=='o' or i=='u'):
+            vowels = vowels + 1
+print("Number of vowels are: " + str(vowels))
+
+
 
