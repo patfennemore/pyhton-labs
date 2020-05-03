@@ -28,7 +28,7 @@ print(str(second_word_length) + ", " + str(second_word))
 print(str(third_word_length) + ", " + str(third_word))
 
 maximum_char = max(len(w)for w in word_list)
-print("Longest word in the list has",maximum_char, "characters")
+print("The longest word in the list has",maximum_char, "characters")
 
 if len(word_list) == maximum_char:
        print(word_list)
