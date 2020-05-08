@@ -10,4 +10,8 @@ For example if n is 3, you print:
 
 '''
 
-n = 5
+n = 7
+
+for number in range(n):
+    number += 1
+    print(number * "*")
