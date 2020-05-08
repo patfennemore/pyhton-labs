@@ -4,9 +4,24 @@ CHALLENGE: Write a script that sorts a dictionary into a list of tuples based on
 input_dict = {"item1": 5, "item2": 6, "item3": 1}
 result_list = [("item3", 1), ("item1", 5), ("item2", 6)]
 
-NOTE: Check out the Python docs and see whether you can come up with a solution, even if you don't yet
-      completely understand _why_ it works the way it does:
-      https://docs.python.org/3/howto/sorting.html#key-functions
-      Feel free to discuss any questions you have with your mentor and on the forum!
-
 '''
+input_dict = {"item1": 5, "item2": 6, "item3": 1}
+input_dict_sorted = {}
+
+sorted_list_values = sorted(input_dict.values())
+
+for sorted_list_value in sorted_list_values:
+    for key, value in input_dict.items():
+        if sorted_list_value == value:
+            input_dict_sorted[key] = value
+
+result_list_1 = []
+result_list = []
+
+for key, value in input_dict_sorted.items():
+    result_list_1.append(key)
+    result_list_1.append(value)
+    new_tuple = tuple(result_list_1)
+    result_list.append(new_tuple)
+    result_list_1.clear()
+print(result_list)
