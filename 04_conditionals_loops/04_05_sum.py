@@ -7,3 +7,12 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+user_start = int(input("Enter start number: "))
+user_end = int(input("Enter end number: "))
+
+sum_list = 0
+
+for number in range(user_start, (user_end + 1)):
+    sum_list += number
+
+print(sum_list)
