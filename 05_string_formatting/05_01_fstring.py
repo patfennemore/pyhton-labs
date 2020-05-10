@@ -18,3 +18,17 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+names = []
+quotes = []
+count = -1
+
+for library in famous_quotes:
+    for key, value in library.items():
+        if key == "full_name":
+            names.append(value)
+        if key == "quote":
+            quotes.append(value)
+            if len(quotes) >= count:
+                count += 1
+                print(quotes[count] + " - " + names[count])
