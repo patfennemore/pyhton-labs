@@ -28,5 +28,21 @@ for library in famous_quotes:
         if key == "quote":
             quotes.append(value)
 
+list_name = []
+for name in names:
+    list_name.append(name.split())
+
+list_name_moved = []
+for n in list_name:
+    if len(n) == 2:
+        list_name_moved.append(n[1] + ", " + n[0])
+    if len(n) == 3:
+        list_name_moved.append(n[2] + ", " + n[0] + " " + n[1])
+print(list_name_moved)
+
 for count in range(1, len(quotes)):
-    print(f'"{quotes[count]}" - {names[count]}')
+    print(f'"{quotes[count]}" - {list_name_moved[count]}')
+
+
+
+
