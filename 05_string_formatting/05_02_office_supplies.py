@@ -51,5 +51,5 @@ for n in list_name:
 
 
 for count in range(0, len(list_items)):
-    print(f'{(list_name_moved[count])}{(24-(len(list_name_moved[count])))*(" "):>} {(list_items[count])}')
+    print(f'{(list_name_moved[count])}{(24-(len(list_name_moved[count])))*(" "):>} {(list_items[count].capitalize())}')
 
