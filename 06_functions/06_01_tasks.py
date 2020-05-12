@@ -4,12 +4,21 @@ Write a script that completes the following tasks.
 
 '''
 
-# define a function that determines whether the number is divisible by 4 or 7 and returns a boolean
 
-# define a function that determines whether a number is divisible by both 4 and 7 and returns a boolean
+def four_or_seven(number):
+    result = bool(number % 4 == 0 or number % 7 == 0)
+    return result
 
-# take in a number from the user between 1 and 1,000,000,000
 
-# call your functions, passing in the user input as the arguments, and set their output equal to new variables 
+def four_and_seven(number):
+    result = bool(number % 4 == 0 and number % 7 == 0)
+    return result
 
-# print your new variables to display the results
+
+user_input = int(input("Enter a number between 1 and 1000 000 000: "))
+
+four_or_seven_result = four_or_seven(user_input)
+four_and_seven_result = four_and_seven(user_input)
+
+print(four_or_seven_result)
+print(four_and_seven_result)
