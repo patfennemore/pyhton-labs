@@ -7,7 +7,6 @@ LASTNAME, Name           Office supply item
 LONGERLASTNAME, Name     Office supply item
 
 '''
-
 office = [
     {"full_name": "Michael Scott", "item": "world's best boss mug"},
     {"full_name": "Dwight Schrute", "item": "pepper spray"},
@@ -26,30 +25,21 @@ office = [
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
 
-list_items = []
-names = []
+space = 20
 
-for library in office:
-    for key, value in library.items():
-        if key == "full_name":
-            names.append(value)
-        if key == "item":
-            list_items.append(value)
+for item in office:
 
-list_name = []
+    full_name = item["full_name"].split()
+    last_name = full_name[1].upper()
+    first_name = full_name[0]
 
-for name in names:
-    list_name.append(name.split())
+    formatted_name = last_name + ', ' + first_name
 
-list_name_moved = []
+    len_of_name = len(formatted_name)
 
-for n in list_name:
-    if len(n) == 2:
-        list_name_moved.append(n[1].upper() + ", " + n[0])
-    if len(n) == 3:
-        list_name_moved.append(n[2] + ", " + n[0] + " " + n[1])
+    required_space = ' ' * (space - len_of_name)
 
+    item_name = item["item"].capitalize()
 
-for count in range(0, len(list_items)):
-    print(f'{(list_name_moved[count])}{(24-(len(list_name_moved[count])))*(" "):>} {(list_items[count].capitalize())}')
+    print(f'{formatted_name}{required_space}{item_name}')
 
