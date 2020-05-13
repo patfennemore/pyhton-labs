@@ -18,30 +18,16 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
-quotes = []
-names = []
 
-for library in famous_quotes:
-    for key, value in library.items():
-        if key == "full_name":
-            names.append(value)
-        if key == "quote":
-            quotes.append(value)
-
-list_name = []
-for name in names:
-    list_name.append(name.split())
-
-list_name_moved = []
-for n in list_name:
-    if len(n) == 2:
-        list_name_moved.append(n[1] + ", " + n[0])
-    if len(n) == 3:
-        list_name_moved.append(n[2] + ", " + n[0] + " " + n[1])
-print(list_name_moved)
-
-for count in range(1, len(quotes)):
-    print(f'"{quotes[count]}" - {list_name_moved[count]}')
+for quote in famous_quotes:
+    list_names = quote['full_name'].split()
+    if len(list_names) == 3:
+        first_name = list_names[0] + ' ' + list_names[1]
+        last_name = list_names[2]
+    else:
+        last_name = list_names[1]
+        first_name = list_names[0]
+    print(f"{quote['quote']} - {last_name}, {first_name} ")
 
 
 
