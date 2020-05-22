@@ -10,6 +10,7 @@ changing the objects attributes.
 
 '''
 
+
 class Car:
     def __init__(self, model, year, max_speed):
         self.model = model
@@ -17,7 +18,7 @@ class Car:
         self.max_speed = max_speed
 
     def accelerate(self):
-         self.max_speed += 5
+        self.max_speed += 5
 
     def details(self):
         print(f"You car is a {self.model} which was made in {self.year} and has a max speed of {self.max_speed}")
