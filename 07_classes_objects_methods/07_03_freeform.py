@@ -16,5 +16,59 @@ Be creative. Have some fun. :)
 Using objects you can model anything you want.
 Cars, animals, poker games, sports teams, trees, beers, people etc...
 
-
 '''
+
+
+class Pilot:
+    def __init__(self, name=None, hours=None, height=None):
+        self.name = name
+        self.hours = hours
+        self.height = height
+
+    def __str__(self):
+        return f"{self.name} has been flying for {self.hours} hours and is {self.height} tall"
+
+
+class Plane(Pilot):
+    def __init__(self, model=None, speed=None, color=None):
+        self.model = model
+        self.speed = speed
+        self.color = color
+        Pilot.__init__(self)
+
+    def __str__(self):
+        return f"{self.speed} is the speed of the {self.model} and it is a {self.color} color"
+
+    def __add__(self, other):
+        return self.speed + other.speed
+
+
+class Airport:
+    def __init__(self, name=None, length=None, code=None):
+        self.name = name
+        self.length = length
+        self.code = code
+
+    def __str__(self):
+        return f"{self.name} has a runway length of {self.length} and the IATA code {self.code}"
+
+    def __add__(self, other):
+        """Overloading using the + operator"""
+        return self.length + other.name
+
+
+lax = Airport("Los Angeles", 2721, "LAX")
+sin = Airport("Singapore", 4000, "SIN")
+
+daz = Pilot("Dayle", 550, "220cm")
+ian = Pilot("Ian", 2500, "110cm")
+
+c152 = Plane("C152", 90, "White")
+c172 = Plane("C172", 95, "Blue")
+
+b747 = Plane("B747", 110, "Red", daz)
+
+c152.color = "grey"
+print(c152)
+print(b747)
+print(b747.pilotinside())
