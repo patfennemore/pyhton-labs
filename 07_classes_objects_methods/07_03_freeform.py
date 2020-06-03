@@ -27,12 +27,11 @@ class Pilot:
 
     def __str__(self):
         return f"{self.name} has been flying for {self.hours} hours and is {self.height} tall"
-    
 
 
-
-class Plane():
-    def __init__(self, model=None, speed=None, color=None):
+class Plane(Pilot):
+    def __init__(self, model=None, speed=None, color=None, name=None, hours=None, height=None):
+        Pilot.__init__(self, name, hours, height)
         self.model = model
         self.speed = speed
         self.color = color
@@ -42,6 +41,9 @@ class Plane():
 
     def __add__(self, other):
         return self.speed + other.speed
+
+    def captain(self):
+        print(Pilot.name)
 
 
 class Airport:
@@ -69,5 +71,3 @@ c172 = Plane("C172", 95, "Blue")
 
 c152.color = "grey"
 print(c152)
-
-
